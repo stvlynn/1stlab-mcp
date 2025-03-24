@@ -50,16 +50,6 @@ export default ({ query }: Props) => {
     }
   }, [query]);
 
-  useEffect(() => {
-    const handleRouteChange = () => {
-      setInputDisabled(false); // Re-enable input after route change
-    };
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, []);
-
   return (
     <section className="relative mt-4 md:mt-8">
       <div className="mx-auto w-full max-w-2xl px-6 text-center">
