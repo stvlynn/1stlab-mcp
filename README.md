@@ -54,9 +54,10 @@ open [http://localhost:3000](http://localhost:3000) in your browser
 
 - [MCP Server Telegram](https://t.me/+N0gv4O9SXio2YWU1)
 - [MCP Server Discord](https://discord.gg/RsYPRrnyqg)
+- [ChatMCP Official Twitter](https://x.com/chatmcp)
 
 ## About the author
 
 - [idoubi](https://bento.me/idoubi)
-- [Follow me on Twitter](https://x.com/idoubi)
+- [Follow me on Twitter](https://x.com/idoubicv)
 - [Buy me a coffee](https://www.buymeacoffee.com/idoubi)
