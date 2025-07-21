@@ -50,12 +50,6 @@ importers:
       react-lazy-load-image-component:
         specifier: ^1.6.2
         version: 1.6.2(react@19.0.0)
-      remixicon:
-        specifier: ^4.6.0
-        version: 4.6.0
-      remixicon-react:
-        specifier: ^1.0.0
-        version: 1.0.0(react@19.0.0)
       uuid:
         specifier: ^11.0.3
         version: 11.0.3
@@ -2058,14 +2052,6 @@ packages:
 
   reghex@1.0.2:
     resolution: {integrity: sha512-bYtyDmFGHxn1Y4gxIs12+AUQ1WRDNvaIhn6ZuKc5KUbSVcmm6U6vx/RA66s26xGhTWBErKKDKK7lorkvvIBB5g==}
-
-  remixicon-react@1.0.0:
-    resolution: {integrity: sha512-KOXlc8EdKdujr2f/2idyFSQRjUB8p0HNiWZYBBzRsTRlTXFuSAFfnGq9culNjhCGmc92Jbtfr9OP0MXWvTMdsQ==}
-    peerDependencies:
-      react: '>=0.14.0'
-
-  remixicon@4.6.0:
-    resolution: {integrity: sha512-bKM5odjqE1yzVxEZGJE7F79WHhNrJFIKHXR+GG+P1IWXn8AnJZhl8SbIRDJsNAvIqx4VPkNwjuHfc42tutMDpQ==}
 
   require-from-string@2.0.2:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
@@ -4300,12 +4286,6 @@ snapshots:
   readdirp@4.0.2: {}
 
   reghex@1.0.2: {}
-
-  remixicon-react@1.0.0(react@19.0.0):
-    dependencies:
-      react: 19.0.0
-
-  remixicon@4.6.0: {}
 
   require-from-string@2.0.2: {}
 
