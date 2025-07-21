@@ -3,19 +3,26 @@
 @tailwind utilities;
 
 :root {
-  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+  background-color: #0a0a0a;
+  --primary: #FF6934;
+  --primary-foreground: #ffffff;
+  --secondary: #1a1a1a;
+  --accent: #FF6934;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 10, 10, 10;
+    --background-end-rgb: 42, 42, 42;
   }
 }
 
 body {
-  @apply bg-slate-50 text-base;
+  @apply bg-gray-950 text-base text-white;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .bg-gradient-radial {
@@ -30,13 +37,37 @@ body {
 }
 
 .text-primary {
-  color: #2752f4;
+  color: #FF6934;
 }
 
 .bg-primary {
-  background-color: #2752f4;
+  background-color: #FF6934;
 }
 
 .border-primary {
-  border-color: #2752f4;
+  border-color: #FF6934;
+}
+
+.text-orange-primary {
+  color: #FF6934;
+}
+
+.bg-orange-primary {
+  background-color: #FF6934;
+}
+
+.border-orange-primary {
+  border-color: #FF6934;
+}
+
+.hover\:bg-orange-primary:hover {
+  background-color: #FF6934;
+}
+
+.hover\:text-orange-primary:hover {
+  color: #FF6934;
+}
+
+.hover\:border-orange-primary:hover {
+  border-color: #FF6934;
 }

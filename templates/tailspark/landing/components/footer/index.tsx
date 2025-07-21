@@ -46,7 +46,7 @@ export default ({ footer }: { footer: Footer }) => {
                     <p key={iidx}>
                       <a
                         href={child?.url}
-                        className="inline-block py-1.5 font-normal text-[#276EF1] transition hover:text-[#276EF1]"
+                        className="inline-block py-1.5 font-normal text-white transition hover:text-white/80"
                         target={child?.target}
                       >
                         {child?.title}

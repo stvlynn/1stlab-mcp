@@ -1,63 +1,115 @@
-## MCP Directory
+# MCP Directory
 
-a directory for Awesome MCP Servers.
+A comprehensive directory for awesome MCP (Model Context Protocol) servers, curated by the FirstLab community.
 
-live preview: [https://mcp.so](https://mcp.so)
+**Live Preview:** [https://1stlab.org](https://1stlab.org)
 
 ![preview](./preview.png)
 
+## About FirstLab
+
+FirstLab is an international AI enthusiast community composed of developers from Chinese, English, and Japanese speaking regions. We're dedicated to advancing AI technology and fostering collaboration across language barriers.
+
+### Our Projects
+- **MCP Directory** - This comprehensive directory of MCP servers
+- **Hello Dify** ([hellodify.com](https://hellodify.com)) - A guidebook to help newcomers quickly get started with Dify
+
+### Join Our Community
+- **Discord:** [https://discord.gg/PwZDHH4mv3](https://discord.gg/PwZDHH4mv3)
+- **X (Twitter):** [@firstlab_ai](https://x.com/firstlab_ai)
+
 ## Quick Start
 
-1. clone the repo
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/chatmcp/mcp-directory.git
-cd mcp-directory
+git clone https://github.com/stvlynn/1stlab-mcp.git
+cd 1stlab-mcp
 ```
 
-2. install dependencies
+### 2. Install Dependencies
 
 ```bash
 pnpm install
 ```
 
-3. prepare database
+### 3. Database Setup
 
-create a database with [Supabase](https://supabase.com/)
+Create a database with [Supabase](https://supabase.com/)
 
-run the sql file in `data/install.sql`
+Run the SQL file to set up the database schema:
 
-4. set env variables
-
-put a .env file in the root directory
-
-with env variables:
-
-```env
-SUPABASE_URL=""
-SUPABASE_ANON_KEY=""
-
-NEXT_PUBLIC_WEB_URL="http://localhost:3000"
+```bash
+# Execute the SQL file in your Supabase dashboard
+data/install.sql
 ```
 
-5. run the dev server
+### 4. Environment Configuration
+
+Create a `.env` file in the root directory with the following variables:
+
+```env
+SUPABASE_URL="your-supabase-url"
+SUPABASE_ANON_KEY="your-supabase-anon-key"
+NEXT_PUBLIC_WEB_URL="http://localhost:3000"
+OPENAI_MODEL="gpt-4o-mini"
+```
+
+### 5. Run Development Server
 
 ```bash
 pnpm dev
+# or
+make dev
 ```
 
-6. preview the site
+### 6. Preview the Site
 
-open [http://localhost:3000](http://localhost:3000) in your browser
+Open [http://localhost:8051](http://localhost:8051) in your browser
 
-## Community
+## Features
 
-- [MCP Server Telegram](https://t.me/+N0gv4O9SXio2YWU1)
-- [MCP Server Discord](https://discord.gg/RsYPRrnyqg)
-- [ChatMCP Official Twitter](https://x.com/chatmcp)
+- 🔍 **Smart Search** - Find MCP servers by category, tags, or keywords
+- 🏷️ **Categorization** - Organized by functionality (Search Tools, Databases, etc.)
+- ⭐ **Featured Projects** - Curated selection of outstanding MCP servers
+- 🤖 **AI-Powered Summaries** - Automatic project summarization using OpenAI
+- 📱 **Responsive Design** - Works seamlessly on desktop and mobile
+- 🌐 **Multi-language Support** - Built for international community
 
-## About the author
+## Tech Stack
 
-- [idoubi](https://bento.me/idoubi)
-- [Follow me on Twitter](https://x.com/idoubicv)
-- [Buy me a coffee](https://www.buymeacoffee.com/idoubi)
+- **Frontend:** Next.js 15, React 19, TypeScript, Tailwind CSS
+- **Database:** Supabase (PostgreSQL)
+- **AI Integration:** OpenAI for content processing
+- **Deployment:** Cloudflare Pages
+- **Package Manager:** pnpm
+
+## Contributing
+
+We welcome contributions from the community! Whether you're fixing bugs, adding features, or improving documentation, your help is appreciated.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## Attribution
+
+This project is based on [chatmcp/mcp-directory](https://github.com/chatmcp/mcp-directory). We extend our gratitude to the original authors for open-sourcing their work and making this project possible. All modifications and enhancements comply with the Apache License 2.0.
+
+## Support
+
+If you find this project helpful, please consider:
+- ⭐ Starring the repository
+- 🐛 Reporting issues
+- 💡 Suggesting new features
+- 🤝 Joining our Discord community
+
+---
+
+**Built with ❤️ by the FirstLab Community**

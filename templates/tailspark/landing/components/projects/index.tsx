@@ -2,6 +2,7 @@
 
 import { Project } from "@/types/project";
 import ProjectItem from "./item";
+import ProjectSkeleton from "./loading-skeleton";
 
 export default ({
   projects,
@@ -24,7 +25,13 @@ export default ({
             })}
           </div>
         ) : (
-          <div className="mx-auto text-center">Loading data...</div>
+          <div className="mb-8 gap-5 py-4 [column-count:1] md:mb-12 md:[column-count:2] lg:mb-16 lg:[column-count:3]">
+            {[...Array(6)].map((_, idx) => (
+              <div key={idx}>
+                <ProjectSkeleton />
+              </div>
+            ))}
+          </div>
         )}
       </div>
     </section>

@@ -5,47 +5,57 @@ import { Header, Item } from "@/types/landing";
 
 import DropDown from "./dropdown";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from "@/components/language-switcher";
+import { useLanguage } from "@/providers/language";
 
 export default ({ header }: { header: Header }) => {
   const pathname = usePathname();
+  const { t } = useLanguage();
 
   return (
     <header className="mx-auto w-full max-w-7xl px-4 md:px-8 mt-4 md:mt-4">
-      <div className="flex items-center">
-        <p className="text-lg md:text-3xl font-medium ">
+      <div className="flex items-center justify-between rounded-32 bg-white/20 backdrop-blur-xl border border-white/30 px-6 py-4 shadow-lg">
+        <p className="text-lg md:text-3xl font-medium">
           <a
-            className="flex items-center bg-cover bg-center py-3 px-2 md:py-4 m text-primary cursor-pointer font-bold"
+            className="flex items-center bg-cover bg-center py-3 px-2 md:py-4 text-orange-400 cursor-pointer font-bold hover:text-orange-300 transition-colors duration-300"
             href={header?.brand?.url}
           >
             <img
               src={header?.brand?.avatar?.src}
               alt={header?.brand?.avatar?.title || header?.brand?.title}
-              className="w-10 h-10 rounded-full border-2 border-slate-300 shadow-lg mr-2"
+              className="w-10 h-10 rounded-full border-2 border-orange-500/30 shadow-lg mr-2 hover:border-orange-500/50 transition-colors duration-300"
             />
-            {header?.brand?.title}
+            {t('header.brand.title')}
           </a>
         </p>
 
-        <div className="flex-1">
-          <ul className="md:flex float-right flex text-lg text-slate-700 mr-4 items-center">
-            {header?.nav?.items?.map((item: Item, idx: number) => {
+        <div className="flex items-center space-x-4">
+          <ul className="md:flex flex text-lg text-black/80 items-center space-x-6">
+            {t('header.nav.items')?.map((item: Item, idx: number) => {
               return (
-                <li className="mx-4 hidden md:block" key={idx}>
+                <li key={idx}>
                   <a
                     href={item.url}
                     target={item.target}
                     className={
                       pathname === item.url
-                        ? "text-[#2752f4]"
-                        : "hover:text-[#2752f4]"
+                        ? "text-orange-400 font-semibold border-b-2 border-orange-400 pb-1"
+                        : "text-black/80 hover:text-orange-400 transition-colors duration-300"
                     }
                   >
                     {item.title}
                   </a>
                 </li>
               );
-            })}
+            }) || []}
+            <li>
+              <LanguageSwitcher />
+            </li>
           </ul>
+          
+          <div className="md:hidden">
+            <DropDown />
+          </div>
         </div>
         {/* <a
           className="mr-4"

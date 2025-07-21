@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "title": "MCPサーバー",
+    "description": "MCPサーバーの最大コレクション、Awesome MCPサーバーとClaude MCP統合を含む。MCPサーバーを検索・発見してAI機能を強化しましょう。",
+    "keywords": "MCPサーバー, Awesome MCPサーバー, Claude MCP, モデルコンテキストプロトコル"
+  },
+  "header": {
+    "brand": {
+      "title": "MCPサーバー",
+      "url": "/",
+      "avatar": {
+        "src": "/logo.png"
+      }
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "カテゴリー",
+          "url": "/categories",
+          "target": "_self"
+        },
+        {
+          "title": "投稿",
+          "url": "https://github.com/stvlynn/1stlab-mcp/issues/1",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "url": "https://discord.gg/PwZDHH4mv3",
+          "target": "_blank"
+        }
+      ]
+    }
+  },
+  "hero": {
+    "title": "素晴らしいMCPサーバーを発見",
+    "description": " 個のMCPサーバーが保存されています"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "description": "MCPサーバーに関するよくある質問",
+    "items": [
+      {
+        "title": "MCP（モデルコンテキストプロトコル）とは何ですか？",
+        "description": "MCPは、AnthropicによってClaudeなどのAIシステムが様々なデータソースに安全に接続できるように開発されたオープンソースプロトコルです。クライアント・サーバーアーキテクチャを通じて、AIアシスタントが外部データ、ツール、プロンプトにアクセスするための汎用標準を提供します。"
+      },
+      {
+        "title": "MCPサーバーとは何ですか？",
+        "description": "MCPサーバーは、AIクライアントにコンテキスト、ツール、プロンプトを提供するシステムです。ファイル、ドキュメント、データベース、API統合などのデータソースを公開し、AIアシスタントが安全な方法でリアルタイム情報にアクセスできるようにします。"
+      },
+      {
+        "title": "MCPサーバーはどのように動作しますか？",
+        "description": "MCPサーバーは、シンプルなクライアント・サーバーアーキテクチャを通じて動作します。標準化されたプロトコルを通じてデータとツールを公開し、Claude Desktopなどのホストアプリケーション内でクライアントとの安全な1:1接続を維持します。"
+      },
+      {
+        "title": "MCPサーバーは何を提供できますか？",
+        "description": "MCPサーバーは、リソース（ファイル、ドキュメント、データ）の共有、ツール（API統合、アクション）の公開、プロンプト（テンプレート化されたインタラクション）の提供が可能です。独自のリソースを制御し、セキュリティのために明確なシステム境界を維持します。"
+      },
+      {
+        "title": "ClaudeはMCPをどのように使用しますか？",
+        "description": "Claudeは、外部データソースとツールにアクセスするためにMCPサーバーに接続し、リアルタイム情報で機能を強化できます。現在、これはローカルMCPサーバーで動作し、企業向けリモートサーバーサポートは近日公開予定です。"
+      },
+      {
+        "title": "MCPサーバーは安全ですか？",
+        "description": "はい、セキュリティはMCPプロトコルに組み込まれています。サーバーは独自のリソースを制御し、LLMプロバイダーとAPIキーを共有する必要がなく、システムは明確な境界を維持します。各サーバーは独自の認証とアクセス制御を管理します。"
+      },
+      {
+        "title": "1stlab.orgとは何ですか？",
+        "description": "1stlab.orgは、サードパーティのMCPサーバーを収集・整理するコミュニティ主導のプラットフォームです。ユーザーがAIアプリケーションで利用可能な様々なMCPサーバーを発見、共有、学習できる中央ディレクトリとして機能します。"
+      },
+      {
+        "title": "1stlab.orgに自分のMCPサーバーを投稿するにはどうすればよいですか？",
+        "description": "GitHubリポジトリで新しいissueを作成することで、MCPサーバーを投稿できます。ナビゲーションバーの「投稿」ボタンをクリックするか、GitHubのissuesページを直接訪問してください。名前、説明、機能、接続情報を含むサーバーの詳細を提供してください。"
+      }
+    ]
+  },
+  "footer": {
+    "brand": {
+      "title": "MCPサーバー",
+      "description": "MCPサーバーの最大コレクション、Awesome MCPサーバーとClaude MCP統合を特徴とします。",
+      "domain": "https://1stlab.org"
+    },
+    "copyright": {
+      "owner": "1stlab.org",
+      "text": "すべての権利予約",
+      "url": "https://1stlab.org",
+      "target": "_blank"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "概要",
+          "children": [
+            {
+              "title": "プライバシーポリシー",
+              "url": "/privacy-policy",
+              "target": "_blank"
+            },
+            {
+              "title": "利用規約",
+              "url": "/terms-of-service",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "リソース",
+          "children": [
+            {
+              "title": "モデルコンテキストプロトコル",
+              "url": "https://www.anthropic.com/news/model-context-protocol",
+              "target": "_blank"
+            },
+            {
+              "title": "MCPスターターガイド",
+              "url": "https://modelcontextprotocol.io/introduction",
+              "target": "_blank"
+            },
+            {
+              "title": "Claude MCPサーバー",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "コミュニティ",
+          "children": [
+            {
+              "title": "Discord",
+              "url": "https://discord.gg/PwZDHH4mv3",
+              "target": "_blank"
+            },
+            {
+              "title": "GitHub",
+              "url": "https://github.com/mcpservers/awesome-mcp-servers/issues/1",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "友達",
+          "children": [
+            {
+              "title": "FirstLab",
+              "url": "https://1stlab.org",
+              "target": "_blank"
+            },
+            {
+              "title": "Hello Dify",
+              "url": "https://hellodify.com",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": {
+        "email": {
+          "title": "mcp@1stlab.org",
+          "url": "mailto:mcp@1stlab.org"
+        }
+      }
+    }
+  }
+}

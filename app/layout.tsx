@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/providers/theme";
+import { LanguageProvider } from "@/providers/language";
 import localFont from "next/font/local";
 
 const geistSans = localFont({
@@ -25,12 +26,16 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
         />
         <meta name="google-adsense-account" content="ca-pub-2123767634383915" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
