@@ -21,6 +21,8 @@ export default ({ query }: Props) => {
   const [inputDisabled, setInputDisabled] = useState(false);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [content, setContent] = useState("");
+  const [isSticky, setIsSticky] = useState(false);
+  const [searchContainerRef, setSearchContainerRef] = useState<HTMLDivElement | null>(null);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setContent(e.target.value);
@@ -54,34 +56,54 @@ export default ({ query }: Props) => {
     }
   }, [query]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (searchContainerRef) {
+        const rect = searchContainerRef.getBoundingClientRect();
+        const shouldStick = rect.top <= 0;
+        setIsSticky(shouldStick);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [searchContainerRef]);
+
   return (
-    <section className="relative mt-4 md:mt-8">
-      <div className="mx-auto w-full max-w-2xl px-6 text-center">
-        <form
-          method="POST"
-          action="/gpts/search"
-          className="flex items-center relative"
-        >
-          <input
-            type="text"
-            className="text-sm md:text-md flex-1 px-4 py-3 rounded-32 bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg text-black/80 placeholder-black/50 disabled:border-gray-300/50 disabled:text-gray-400 focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400/50 transition-all duration-300"
-            placeholder={tGeneral('search.placeholder')}
-            ref={inputRef}
-            value={content}
-            disabled={inputDisabled}
-            onChange={handleInputChange}
-            onKeyDown={handleInputKeydown}
-          />
-          <RiSendPlaneFill
-            className="absolute right-4 cursor-pointer text-black/70 hover:text-orange-400 transition-colors duration-300 w-4 h-4"
-            onClick={() => {
-              if (content) {
-                handleSubmit("", content);
-              }
-            }}
-          />
-        </form>
-      </div>
-    </section>
+    <div ref={setSearchContainerRef} className="relative">
+      <section className={`transition-all duration-300 ${isSticky ? 'fixed top-0 left-0 right-0 z-50 py-3' : 'relative mt-4 md:mt-8'}`}>
+        <div className="mx-auto w-full max-w-2xl px-6 text-center">
+          <form
+            method="POST"
+            action="/gpts/search"
+            className="flex items-center relative"
+          >
+            <input
+              type="text"
+              className="text-sm md:text-md flex-1 px-4 py-2.5 rounded-32 bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg text-black/80 placeholder-black/50 disabled:border-gray-300/50 disabled:text-gray-400 focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400/50 transition-all duration-300"
+              placeholder={tGeneral('search.placeholder')}
+              ref={inputRef}
+              value={content}
+              disabled={inputDisabled}
+              onChange={handleInputChange}
+              onKeyDown={handleInputKeydown}
+            />
+            <RiSendPlaneFill
+              className="absolute right-4 cursor-pointer text-black/70 hover:text-orange-400 transition-colors duration-300 w-4 h-4"
+              onClick={() => {
+                if (content) {
+                  handleSubmit("", content);
+                }
+              }}
+            />
+          </form>
+        </div>
+      </section>
+      {isSticky && <div className="h-16"></div>}
+    </div>
   );
 };
