@@ -1,83 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://1stlab.org/category/developer-tools</loc>
-    <lastmod>2024-12-17</lastmod>
+    <loc>https://mcp.1stlab.org/category/developer-tools</loc>
+    <lastmod>2025-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://1stlab.org/category/research-and-data</loc>
-    <lastmod>2024-12-17</lastmod>
+    <loc>https://mcp.1stlab.org/category/ai-chatbot</loc>
+    <lastmod>2025-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://1stlab.org/category/cloud-platforms</loc>
-    <lastmod>2024-12-17</lastmod>
+    <loc>https://mcp.1stlab.org/category/productivity</loc>
+    <lastmod>2025-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://1stlab.org/category/browser-automation</loc>
-    <lastmod>2024-12-17</lastmod>
+    <loc>https://mcp.1stlab.org/category/web-scraping</loc>
+    <lastmod>2025-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://1stlab.org/category/databases</loc>
-    <lastmod>2024-12-17</lastmod>
+    <loc>https://mcp.1stlab.org/category/database</loc>
+    <lastmod>2025-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://1stlab.org/category/ai-chatbot</loc>
-    <lastmod>2024-12-17</lastmod>
+    <loc>https://mcp.1stlab.org/category/automation</loc>
+    <lastmod>2025-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://1stlab.org/category/file-systems</loc>
-    <lastmod>2024-12-17</lastmod>
+    <loc>https://mcp.1stlab.org/category/file-management</loc>
+    <lastmod>2025-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://1stlab.org/category/os-automation</loc>
-    <lastmod>2024-12-17</lastmod>
-  </url>
-  <url>
-    <loc>https://1stlab.org/category/finance</loc>
-    <lastmod>2024-12-17</lastmod>
-  </url>
-  <url>
-    <loc>https://1stlab.org/category/communication</loc>
-    <lastmod>2024-12-17</lastmod>
-  </url>
-  <url>
-    <loc>https://1stlab.org/category/cloud-storage</loc>
-    <lastmod>2024-12-17</lastmod>
-  </url>
-  <url>
-    <loc>https://1stlab.org/category/knowledge-and-memory</loc>
-    <lastmod>2024-12-17</lastmod>
-  </url>
-  <url>
-    <loc>https://1stlab.org/category/entertainment-and-media</loc>
-    <lastmod>2024-12-17</lastmod>
-  </url>
-  <url>
-    <loc>https://1stlab.org/category/calendar-management</loc>
-    <lastmod>2024-12-17</lastmod>
-  </url>
-  <url>
-    <loc>https://1stlab.org/category/database</loc>
-    <lastmod>2024-12-17</lastmod>
-  </url>
-  <url>
-    <loc>https://1stlab.org/category/location-services</loc>
-    <lastmod>2024-12-17</lastmod>
-  </url>
-  <url>
-    <loc>https://1stlab.org/category/customer-data-platforms</loc>
-    <lastmod>2024-12-17</lastmod>
-  </url>
-  <url>
-    <loc>https://1stlab.org/category/security</loc>
-    <lastmod>2024-12-17</lastmod>
-  </url>
-  <url>
-    <loc>https://1stlab.org/category/monitoring</loc>
-    <lastmod>2024-12-17</lastmod>
-  </url>
-  <url>
-    <loc>https://1stlab.org/category/virtualization</loc>
-    <lastmod>2024-12-17</lastmod>
+    <loc>https://mcp.1stlab.org/category/api-integration</loc>
+    <lastmod>2025-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

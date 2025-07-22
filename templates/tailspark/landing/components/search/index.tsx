@@ -21,8 +21,9 @@ export default ({ query }: Props) => {
   const [inputDisabled, setInputDisabled] = useState(false);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [content, setContent] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const [searchContainerRef, setSearchContainerRef] = useState<HTMLDivElement | null>(null);
+  const searchContainerRef = useRef<HTMLDivElement | null>(null);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setContent(e.target.value);
@@ -58,8 +59,8 @@ export default ({ query }: Props) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (searchContainerRef) {
-        const rect = searchContainerRef.getBoundingClientRect();
+      if (searchContainerRef.current) {
+        const rect = searchContainerRef.current.getBoundingClientRect();
         const shouldStick = rect.top <= 0;
         setIsSticky(shouldStick);
       }
@@ -71,16 +72,19 @@ export default ({ query }: Props) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [searchContainerRef]);
+  }, []);
 
   return (
-    <div ref={setSearchContainerRef} className="relative">
+    <div ref={searchContainerRef} className="relative">
+      {isFocused && (
+        <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 transition-opacity duration-300" />
+      )}
       <section className={`transition-all duration-300 ${isSticky ? 'fixed top-0 left-0 right-0 z-50 py-3' : 'relative mt-4 md:mt-8'}`}>
         <div className="mx-auto w-full max-w-2xl px-6 text-center">
           <form
             method="POST"
             action="/gpts/search"
-            className="flex items-center relative"
+            className={`flex items-center relative transition-transform duration-300 z-50 ${isFocused ? 'scale-110 md:scale-125' : ''}`}
           >
             <input
               type="text"
@@ -91,6 +95,8 @@ export default ({ query }: Props) => {
               disabled={inputDisabled}
               onChange={handleInputChange}
               onKeyDown={handleInputKeydown}
+              onFocus={() => setIsFocused(true)}
+              onBlur={() => setIsFocused(false)}
             />
             <RiSendPlaneFill
               className="absolute right-4 cursor-pointer text-black/70 hover:text-orange-400 transition-colors duration-300 w-4 h-4"

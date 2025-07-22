@@ -36,12 +36,12 @@ export default ({ project }: { project: Project }) => {
               <p className="text-base font-semibold text-orange-400 group-hover:text-orange-300 drop-shadow-lg">
                 {project.title}
               </p>
-              <p className="text-sm text-black/70 group-hover:text-black/90 transition-colors duration-300">
+              <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors duration-300">
                 {project.author_name}
               </p>
             </div>
           </div>
-          <p className="mb-4 text-sm text-black/80 group-hover:text-black/90 transition-colors duration-300 line-clamp-3 drop-shadow-sm">
+          <p className="mb-4 text-sm text-white/80 group-hover:text-white/90 transition-colors duration-300 line-clamp-3 drop-shadow-sm">
             {project.description}
           </p>
 
@@ -49,7 +49,7 @@ export default ({ project }: { project: Project }) => {
             {true && <Stars />}
             <div className="flex-1"></div>
 
-            <p className="text-black/60 text-sm group-hover:text-black/80 transition-colors duration-300 drop-shadow-sm">
+            <p className="text-white/60 text-sm group-hover:text-white/80 transition-colors duration-300 drop-shadow-sm">
               {moment(project.created_at).fromNow()}
             </p>
           </div>

@@ -62,9 +62,9 @@ export default function ({
       target="_blank"
       className="hidden md:flex w-64 mx-auto items-center border border-white/30 bg-white/20 backdrop-blur-xl rounded-32 px-6 py-1.5 ml-4 cursor-pointer shadow-lg hover:bg-white/30 hover:border-white/40 transition-all duration-300"
     >
-      <FaGithub className="text-black/80 w-8 h-8" />
+      <FaGithub className="text-white/80 w-8 h-8" />
       <div className="flex flex-col items-start ml-2">
-        <div className="text-sm text-black/80 font-bold">
+        <div className="text-sm text-white/80 font-bold">
           Open-Source(
           <img
             src={StarIcon.src}
@@ -73,8 +73,8 @@ export default function ({
           />
           {stars})
         </div>
-        <div className="text-xs text-black/60 font-medium">
-          chatmcp/mcp-directory
+        <div className="text-xs text-white/60 font-medium">
+          stvlynn/1stlab-mcp
         </div>
       </div>
     </a>
